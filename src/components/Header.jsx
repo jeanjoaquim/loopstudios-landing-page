@@ -1,11 +1,10 @@
-import Logo from '../images/logo.svg';
 import BurgerMenu from '../images/icon-hamburger.svg';
 
-function Header() {
+function Header({ logo }) {
     return(
         <header>
             <div className="header-container">
-                <img src={Logo} alt='logo' />
+                <img src={logo} alt='logo' />
 
                 <div className="mobile-nav-menu">
                     <button className="burger-menu-button">

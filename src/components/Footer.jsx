@@ -18,7 +18,7 @@ function Footer({ logo, facebook, twitter, pinterest, instagram }) {
                     <img src={pinterest} alt='' />
                     <img src={instagram} alt='' />
                 </div>
-                <p>&#169; 2021 Loopstudios. All rights reserved</p>
+                <p className="footer-rights">&#169; 2021 Loopstudios. All rights reserved</p>
             </div>
         </footer>
     );

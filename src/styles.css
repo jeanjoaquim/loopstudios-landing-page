@@ -8,11 +8,13 @@
 
 body {
     font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .container {
     /*height: 100vh;*/
-    width: 90vw;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -33,6 +35,10 @@ header {
     margin: 0 auto;
 }
 
+.desktop-nav-menu {
+    display: none;
+}
+
 .burger-menu-button {
     background-color: unset;
     border: none;
@@ -48,6 +54,7 @@ header {
     position: relative;
     width: 100vw;
     height: 100vh;
+    background-image: url('./images/mobile/image-hero.jpg');
     background-size: cover;
     left: calc(50% - 50vw);
     display: flex;
@@ -58,7 +65,8 @@ header {
 .hero-text {
     color: #FFF;
     text-transform: uppercase;
-    width: 90%;
+    /*width: 90%;*/
+    max-width: 400px;
     font-size: 3rem;
     padding: 1.5rem;
     border: 5px solid #FFF;
@@ -73,8 +81,15 @@ INTERACTIVE VR
     margin: 6rem 0;
 }
 
+.text-block-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .text-block-container img {
     width: 100%;
+    max-width: 600px;
 }
 
 .title-t1 {
@@ -90,7 +105,9 @@ INTERACTIVE VR
 
 .text-block {
     text-align: center;
-    padding: 2rem;
+    padding: 3rem;
+    background-color: #FFFFFF;
+    max-width: 450px;
 }
 
 /*
@@ -114,7 +131,7 @@ CREATIONS
 .gradient-background {
     background: linear-gradient(90deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 100%);
     width: 100%;
-    height: 100%;
+    height: 99%;
     position: absolute;
     top: 0;
     left: 0;
@@ -180,4 +197,180 @@ footer {
     justify-content: center;
     margin: 2rem 0;
     gap: 1rem;
+}
+
+/*
+MOBILE MENU
+*/
+
+.mobile-menu {
+    position: absolute;
+    left: 0;
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 100vw;
+    height: 100svh;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    padding: 10%;
+    transition: .3s ease;
+}
+
+.disabled {
+    top: -100vh;
+}
+
+.active {
+    top: 0;
+}
+
+.mobile-nav-list {
+    list-style: none;
+}
+
+.mobile-nav-item {
+    text-align: left;
+    margin: 2rem 0;
+}
+
+/*
+MEDIA QUERIES
+*/
+
+@media (min-width: 720px) {
+    
+    .mobile-nav-menu {
+        display: none;
+    }
+
+    .desktop-nav-menu {
+        display: flex;
+    }
+
+    .desktop-nav-list {
+        display: flex;
+        justify-content: space-between;
+        color: #FFFFFF;
+        list-style: none;
+        width: 350px;
+    }
+
+    .desktop-nav-item {
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+
+    /*
+    HERO
+    */
+
+    .hero-container {
+        background-image: url('./images/desktop/image-hero.jpg');
+        background-size: cover;
+        background-position: center;
+        justify-content: left;
+        padding-left: 4rem;
+    }
+
+}
+
+.creations-mobile-photo {
+    display: initial;
+}
+
+.creations-desktop-photo {
+    display: none;
+}
+
+@media (min-width: 920px) {
+
+    .text-block-container {
+        max-height: 420px;
+    }
+
+    .text-block-container img {
+        position: relative;
+        right: 150px;
+    }
+
+    .text-block {
+        position: relative;
+        bottom: 250px;
+        left: 250px;
+    }
+
+    .text-block h2,
+    .text-block p {
+        text-align: left;
+    }
+
+    /*
+    CREATIONS
+    */
+
+    .creations-list {
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+    }
+
+    .creations-mobile-photo {
+        display: none;
+    }
+    
+    .creations-desktop-photo {
+        display: initial;
+    }
+
+    .creations-list h2 {
+        grid-column: span 2;
+        text-align: left;
+    }
+
+    .creations-list button {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        margin-right: 0;
+    }
+
+    .title-t2 {
+        width: 60%;
+    }
+
+    /*
+    FOOTER
+    */
+
+    footer {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 5%;
+    }
+
+    .footer-list {
+        flex-direction: row;
+    }
+
+    .footer-list li {
+        margin-top: 2rem;
+    }
+
+    .footer-list {
+        width: 400px;
+        justify-content: space-between;
+    }
+    
+    .socials,
+    .footer-list {
+        margin: 0;
+    }
+
+    .socials {
+        justify-content: right;
+        margin-top: .5rem;
+        margin-bottom: 2.5rem;
+    }
+
 }

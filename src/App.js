@@ -28,7 +28,6 @@ function App() {
                 </div>
             </section>
             <section className='creations-container'>
-                <h2 className='title-t1'>our creations</h2>
                 <CreationsList />
             </section>
             <Footer 

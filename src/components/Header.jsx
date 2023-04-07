@@ -4,7 +4,7 @@ import CloseMenu from '../images/icon-close.svg';
 
 function Header({ logo }) {
 
-    const [toggleMenu, setToggleMenu] = useState(false);
+    const [toggleMenu, setToggleMenu] = useState(true);
     const [changeIcon, setChangeIcon] = useState(BurgerMenu);
 
     const mobileNavigation = () => {
@@ -28,7 +28,7 @@ function Header({ logo }) {
                     </button>
                 </div>
 
-                <nav className={`mobile-menu `}>
+                <nav className={`mobile-menu ${toggleMenu ? 'active' : 'disabled'} `}>
                     <ul className='mobile-nav-list'>
                         <li className="mobile-nav-item title-t1">about</li>
                         <li className="mobile-nav-item title-t1">careers</li>

@@ -28,7 +28,7 @@ function Header({ logo }) {
                     </button>
                 </div>
 
-                <nav className={`mobile-menu ${toggleMenu ? 'active' : 'disabled'} `}>
+                <nav className={`mobile-menu `}>
                     <ul className='mobile-nav-list'>
                         <li className="mobile-nav-item title-t1">about</li>
                         <li className="mobile-nav-item title-t1">careers</li>

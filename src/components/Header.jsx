@@ -4,7 +4,7 @@ import CloseMenu from '../images/icon-close.svg';
 
 function Header({ logo }) {
 
-    const [toggleMenu, setToggleMenu] = useState(true);
+    const [toggleMenu, setToggleMenu] = useState(false);
     const [changeIcon, setChangeIcon] = useState(BurgerMenu);
 
     const mobileNavigation = () => {
